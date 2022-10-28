@@ -1,0 +1,17 @@
+# what jobs are part of this workflow?
+
+name: GitActionsDemo # just name of the workflow
+on: [push] # In what event does this workflow run
+
+jobs:
+ action_demo:
+   #runs - on: what type of OS is pipeline running on
+   runs-on: ubuntu-latest
+   # for this job what do you want it to do?
+   steps:
+    - run: echo 'Hello World'
+    - run: pwd
+    - run: ls
+    - run: echo 'Job status is ${{job.status}}'
+   
+   
